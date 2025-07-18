@@ -4,7 +4,7 @@ let socket=null;
 //import.meta.env.VITE_SOCKET_URL
 export const initSocket = () => {
   if (!socket) {
-    socket = io('http://localhost:5000', {
+    socket = io(import.meta.env.VITE_SOCKET_URL,{
       withCredentials: true,
       autoConnect: true,
       transports: ['websocket'],

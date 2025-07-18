@@ -6,7 +6,7 @@ let io;
 export const initSocket = (server) => {
   io = new Server(server, {
     cors: {
-      origin: "http://localhost:5173",
+      origin: "https://w3assignment.vercel.app",
       methods: ['GET', 'POST']
     }
   });
@@ -14,7 +14,7 @@ export const initSocket = (server) => {
   io.on('connection', async (socket) => {
     console.log(' Socket connected:', socket.id);
 
-    
+
     const users = await getAllUsers() || [];
     socket.emit('initial-users', { users }); // consistent with frontend
 
