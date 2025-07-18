@@ -1,4 +1,4 @@
-# W3 Business – Real-Time Leaderboard App
+# 3W Business Private Limited – Real-Time Leaderboard App
 
 A real-time leaderboard app where:
 
