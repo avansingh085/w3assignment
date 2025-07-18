@@ -1,7 +1,7 @@
 import React from 'react';
 import { getSocket } from '../socket/socket';
 
-const UserCard = ({ user, isCurrentUser = false }) => {
+const UserCard = ({ user, isCurrentUser = false,rank }) => {
   
     const addRandomPoint = () => {
        
@@ -42,6 +42,9 @@ const UserCard = ({ user, isCurrentUser = false }) => {
           
 
             <div className="flex justify-between items-center relative z-10">
+                <div className='text-xl text-black font-bold'>
+                   {rank}
+                </div>
                 <div className="flex items-center space-x-3">
                     <div className={`${getAvatarColor(user.username)} text-white rounded-full w-10 h-10 flex items-center justify-center text-lg font-bold`}>
                         {user.username.charAt(0).toUpperCase()}

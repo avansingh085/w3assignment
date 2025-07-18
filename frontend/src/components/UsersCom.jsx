@@ -83,8 +83,8 @@ const UsersCom = () => {
       ) : (
         <>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-            {currentUsers.map((user) => (
-              <UserCard key={user.id} user={user} />
+            {currentUsers.map((user,index) => (
+              <UserCard key={index} user={user} rank={index+1} />
             ))}
           </div>
 
